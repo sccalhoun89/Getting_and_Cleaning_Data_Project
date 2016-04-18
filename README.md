@@ -1,5 +1,7 @@
 #Getting_and_Cleaning_Data_Project
 
+This script requires the dplyr and data.table R Packages.
+
 ##Merge the training and test sets to create one data set.
 
 - Data merging of the training and test sets was used to create one data set.
