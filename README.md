@@ -1,22 +1,37 @@
-# Getting_and_Cleaning_Data_Project
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
+#Getting_and_Cleaning_Data_Project
 
-One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
+##Merge the training and test sets to create one data set.
 
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+- Data merging of the training and test sets was used to create one data set.
+- X_train and X_test are features data and bound into one data set.
+- y_train and y_test are activity data and bound into one data set.
+- Subject_train and subject_test are subject data and bound into one data set.
+- Column names for Subject and Activity were added at this point and the three data sets were combined by column to form the one data set.
 
-Here are the data for the project:
+##Extract only the measurements on the mean and standard deviation for each measurement.
 
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+- grep() is used to create the index of columns having only Mean or Standard Deviation measurements.
+- A new data set is created according to the indexed data.
 
-You should create one R script called run_analysis.R that does the following:
+##Use descriptive activity names to name the activities in the data set.
 
-1. Merges the training and the test sets to create one data set.
+- Activity labels are derived from the activity_labels.txt file and assigned to the appropriate row in the data set.
 
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
+##Appropriately label the data set with descriptive variable names.
 
-3. Uses descriptive activity names to name the activities in the data set.
+Labels are assigned to the appropriate column based on the following:
 
-4. Appropriately labels the data set with descriptive variable names.
+- t -> Time
+- Acc -> Accelerometer
+- Gyro -> Gyroscope
+- Mag -> Magnitude
+- f and freq -> Frequency
+- mean -> Mean
+- std -> STD (Abbreviation for Standard Deviation)
+- angle -> Angle
+- gravity -> Gravity
 
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+##Result
+
+- An independent tidy data set with the average of each variable for each activity and each subject.
+- Created adn output in the form of a .txt file, "Dataset_Tidy"
