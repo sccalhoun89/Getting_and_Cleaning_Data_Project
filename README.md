@@ -4,7 +4,7 @@ This script requires the dplyr and data.table R Packages.
 
 ##Merge the training and test sets to create one data set.
 
-- Data merging of the training and test sets was used to create one data set.
+- Data merging of the training and test sets are used to create one data set.
 - X_train and X_test are features data and bound into one data set.
 - y_train and y_test are activity data and bound into one data set.
 - Subject_train and subject_test are subject data and bound into one data set.
