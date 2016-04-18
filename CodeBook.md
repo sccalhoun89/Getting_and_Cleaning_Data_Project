@@ -1,7 +1,5 @@
 #Getting and Cleaning Data Project Code Book
 
-This script requires the dplyr and data.table R Packages.
-
 This data was taken from the Human Activity Recognition Using Smartphones Dataset Version 1.0 (www.smartlab.ws)
 
 ##Files
@@ -32,26 +30,9 @@ The following files are available for the train and test data. Their description
 - Each feature vector is a row on the text file.
 - For more information about this dataset contact: activityrecognition@smartlab.ws
 
-##Merge the training and test sets to create one data set.
+##Data Labels
 
-- Data merging of the training and test sets was used to create one data set.
-- X_train and X_test are features data and bound into one data set.
-- y_train and y_test are activity data and bound into one data set.
-- Subject_train and subject_test are subject data and bound into one data set.
-- Column names for Subject and Activity were added at this point and the three data sets were combined by column to form the one data set.
-
-##Extract only the measurements on the mean and standard deviation for each measurement.
-
-- grep() is used to create the index of columns having only Mean or Standard Deviation measurements.
-- A new data set is created according to the indexed data.
-
-##Use descriptive activity names to name the activities in the data set.
-
-- Activity labels are derived from the activity_labels.txt file and assigned to the appropriate row in the data set.
-
-##Appropriately label the data set with descriptive variable names.
-
-Labels are assigned to the appropriate column based on the following:
+Labels are assigned to the appropriate tidy data set columns based on the following:
 
 - t -> Time
 - Acc -> Accelerometer
@@ -62,18 +43,3 @@ Labels are assigned to the appropriate column based on the following:
 - std -> STD (Abbreviation for Standard Deviation)
 - angle -> Angle
 - gravity -> Gravity
-
-##Result
-
-- An independent tidy data set with the average of each variable for each activity and each subject.
-- Created adn output in the form of a .txt file, "Dataset_Tidy"
-
-##License
-
-Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
-
-[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
-
-This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
-
-Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
