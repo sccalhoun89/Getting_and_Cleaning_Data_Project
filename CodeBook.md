@@ -66,7 +66,7 @@ Labels are assigned to the appropriate column based on the following:
 ##Result
 
 - An independent tidy data set with the average of each variable for each activity and each subject.
-- Created adn output in the form of a .csv file, "Dataset_Tidy"
+- Created adn output in the form of a .txt file, "Dataset_Tidy"
 
 ##License
 
