@@ -1,4 +1,4 @@
-#Getting_and_Cleaning_Data_Project
+#Getting and Cleaning Data Project
 
 This script requires the dplyr and data.table R Packages.
 
