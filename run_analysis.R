@@ -77,6 +77,6 @@ extract_data <- data.table(extract_data)
 
 data_final_tidy <- aggregate(.~Subject + Activity, extract_data, mean)
 data_final_tidy <- arrange(data_final_tidy, Subject, Activity)
-write.csv(data_final_tidy, file = "Dataset_Tidy.csv", row.names = FALSE)
+write.table(data_final_tidy, file = "Dataset_Tidy.txt", row.names = FALSE)
 
 rm("data_final_tidy", "extract_data")
